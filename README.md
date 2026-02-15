@@ -11,6 +11,18 @@ This project analyzes 300+ patient reviews to identify systemic "Pain Points" in
 
 ---
 
+## 🏗️ Technical Architecture
+
+### Phase 1: Data Collection (VS Code)
+- **Tooling:** Selenium WebDriver.
+- **Action:** Custom scraper built to handle dynamic loading on Google Maps.
+- **Output:** `delhi_hospital_reviews.csv`
+
+### Phase 2: AI Processing (Google Colab)
+- **Model:** `facebook/bart-large-mnli` (Zero-Shot Classification).
+- **Process:** Automated categorization of raw text into 6 strategic buckets (Wait Times, Staff Behavior, Cleanliness, etc.).
+- **Hardware:** Utilized T4 GPU for high-speed inference.
+---
 ## 📈 Visual Insights
 
 ### 1. Current Pain Points & Praise (Last 12 Months)
@@ -24,19 +36,6 @@ This project analyzes 300+ patient reviews to identify systemic "Pain Points" in
 *To ensure 2026 relevance, we filtered for reviews from the last 12 months, removing "solved" historical problems.*
 
 ---
-
-## 🏗️ Technical Architecture
-
-### Phase 1: Data Collection (VS Code)
-- **Tooling:** Selenium WebDriver.
-- **Action:** Custom scraper built to handle dynamic loading on Google Maps.
-- **Output:** `delhi_hospital_reviews.csv`
-
-### Phase 2: AI Processing (Google Colab)
-- **Model:** `facebook/bart-large-mnli` (Zero-Shot Classification).
-- **Process:** Automated categorization of raw text into 6 strategic buckets (Wait Times, Staff Behavior, Cleanliness, etc.).
-- **Hardware:** Utilized T4 GPU for high-speed inference.
-
 ## 🔍 Key Strategic Findings
 
 The analysis reveals a significant divergence in patient experience between the public and private sectors.
